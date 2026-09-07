@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.splash-content {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 60px 40px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section {
+    margin-bottom: 40px;
+}
+
+.name {
+    font-size: 3em;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+.cta-section {
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #4a5568;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.linkedin-btn:active {
+    transform: translateY(-1px);
+}
+
+.linkedin-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    font-size: 0.9em;
+    color: #a0aec0;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .splash-content {
+        padding: 40px 30px;
+    }
+    
+    .name {
+        font-size: 2.2em;
+    }
+    
+    .tagline {
+        gap: 8px;
+    }
+    
+    .tag {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+    
+    .intro-text {
+        font-size: 1em;
+    }
+    
+    .linkedin-btn {
+        font-size: 1em;
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splash-content {
+        padding: 30px 20px;
+    }
+    
+    .name {
+        font-size: 1.8em;
+    }
+    
+    .tagline {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tag {
+        display: block;
+    }
+}
